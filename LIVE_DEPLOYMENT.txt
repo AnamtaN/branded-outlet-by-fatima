@@ -1,0 +1,29 @@
+BRANDED OUTLET BY FATIMA — LIVE DEPLOYMENT
+
+This is a Node/Express full-stack store. Do NOT open index.html with VS Code Live Server for the final version; use the Node server so /api/products, /api/orders and /api/admin work.
+
+LOCAL
+1. Install Node.js 20+.
+2. Open this folder in Terminal.
+3. Run: npm install
+4. Run: npm start
+5. Store: http://localhost:5500
+6. Admin: http://localhost:5500/admin
+7. Default login: admin / ChangeMe123!
+
+LIVE
+1. Create a Node hosting service (Render/Railway/etc.) and deploy this folder/repository.
+2. Build command: npm install
+3. Start command: npm start
+4. Set environment variables:
+   ADMIN_USER = your chosen admin username
+   ADMIN_PASSWORD = a strong private password
+   SESSION_SECRET = a long random secret
+5. The host will provide a public https://... address that anyone can open.
+6. To use your own domain, add the domain in the hosting dashboard and update its DNS records as instructed by the host.
+
+IMPORTANT DATA NOTE
+The demo backend stores products/orders in JSON files. On hosting with ephemeral storage, these files can reset after redeploy/restart. For a serious production shop, move products/orders/images to a persistent database/storage such as Supabase/Postgres + object storage.
+
+BRANDS
+The brand dropdown works by click. Sapphire, Alkaram, Khaadi, Nishat Linen, Bonanza Satrangi, Ethnic, Sana Safinaz, Limelight and Gul Ahmed are supported. Clicking a brand filters the shop to that brand. Adding a new product in Admin with a new brand automatically makes that brand available in the menu.

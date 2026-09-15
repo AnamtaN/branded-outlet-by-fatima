@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Branded Outlet by Fatima</title>
+<meta name="description" content="Original branded clothing at outlet prices.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="announcement">100% ORIGINAL BRANDS <span>•</span> OUTLET PRICES <span>•</span> LIMITED STOCK</div>
+<header class="header">
+  <div class="utility container"><span>Welcome to Branded Outlet by Fatima</span><span>Call/WhatsApp: <a href="tel:+923345581169">0334 5581169</a></span></div>
+  <div class="mainnav container">
+    <button class="mobile-menu" id="mobileMenu">☰</button>
+    <a class="logo" href="index.html"><img src="assets/logo.png" alt="Branded Outlet by Fatima"></a>
+    <div class="searchbox"><input id="searchInput" type="search" placeholder="Search by brand, product or code..."><button id="searchBtn">⌕</button></div>
+    <div class="nav-actions"><button id="accountBtn">♙ <span>Account</span></button><button id="wishlistBtn">♡ <span id="wishCount">0</span></button><button id="cartBtn">🛍 <span id="cartCount">0</span></button></div>
+  </div>
+  <nav class="categorybar" id="categorybar"><div class="container category-inner">
+    <a href="index.html#shop">NEW ARRIVALS</a><a href="index.html#shop">UNSTITCHED</a><a href="index.html#shop">WOMEN</a>
+    <div class="brand-menu"><button class="brand-menu-btn">BRANDS ▾</button><div class="brand-dropdown" id="brandDropdown"></div></div>
+    <a href="index.html?filter=sale#shop" class="sale-link">SALE</a><a href="#contact">CONTACT US</a>
+  </div></nav>
+</header>
+<main>
+<section class="hero container"><div class="hero-text"><p class="eyebrow">BRANDED OUTLET BY FATIMA</p><h1>Original style.<br><em>Better prices.</em></h1><p>Shop Sapphire, Alkaram and other leading brands in one place. Choose a brand to see only that brand's products.</p><a class="btn dark" href="#shop">SHOP NOW</a></div><div class="hero-art"><img src="assets/logo.png" alt=""></div></section>
+<section class="brand-strip container"><div><p class="eyebrow">SHOP BY BRAND</p><h2>Find your favourite brand</h2></div><div class="brand-chips" id="brandChips"></div></section>
+<section class="benefits container"><div><b>✓</b><span>100% Original</span></div><div><b>♡</b><span>Top Brands</span></div><div><b>🏷</b><span>Outlet Prices</span></div><div><b>↗</b><span>Secure Ordering</span></div></section>
+<section class="shop container" id="shop">
+  <div class="shop-head"><div><p class="eyebrow" id="collectionEyebrow">OUR COLLECTION</p><h2 id="collectionTitle">Shop all products</h2><p class="muted" id="resultText"></p></div><div class="tools"><select id="sortSelect"><option value="featured">Sort: Featured</option><option value="low">Price: Low to High</option><option value="high">Price: High to Low</option><option value="new">Newest</option></select></div></div>
+  <div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="2 Piece">2 Piece</button><button class="filter" data-filter="3 Piece">3 Piece</button><button class="filter" data-filter="Sale">Sale</button></div>
+  <div id="productGrid" class="grid"></div><div id="emptyState" class="empty" hidden><h3>No products in this brand yet</h3><p>Products added from the admin panel will appear here automatically.</p><a class="btn dark" href="/admin">OPEN ADMIN</a></div>
+</section>
+<section class="newsletter"><div class="container newsletter-inner"><div><p class="eyebrow">STAY IN THE LOOP</p><h2>Get new arrivals & offers</h2></div><form id="newsletterForm"><input type="email" required placeholder="Your email address"><button class="btn dark">SUBSCRIBE</button></form></div></section>
+<section class="about container"><div><p class="eyebrow">ABOUT US</p><h2>Branded fashion, outlet prices.</h2></div><p>Branded Outlet by Fatima brings selected branded clothing to customers at attractive prices. Products are organised by brand so customers can browse Sapphire, Alkaram, Khaadi, Nishat Linen and more separately.</p></section>
+<section class="contact container" id="contact"><div><p class="eyebrow">CONTACT US</p><h2>We're here to help.</h2></div><div class="contact-cards"><a href="tel:+923345581169"><b>PHONE / WHATSAPP</b><span>0334 5581169</span></a><a href="mailto:brandedoutletbyfatima786@gmail.com"><b>EMAIL</b><span>brandedoutletbyfatima786@gmail.com</span></a></div></section>
+</main>
+<footer><div class="container footer-grid"><div><img src="assets/logo.png" class="footer-logo" alt=""><p>Original brands ♥ Unbeatable prices.</p></div><div><h4>BRANDS</h4><div id="footerBrands"></div></div><div><h4>HELP</h4><a href="#contact">Contact Us</a><a href="mailto:brandedoutletbyfatima786@gmail.com">Email Us</a><a href="tel:+923345581169">Call Us</a><a href="/admin">Admin</a></div><div><h4>NEWSLETTER</h4><p>Subscribe for new stock and deals.</p><form id="footerNewsletter"><input type="email" required placeholder="Email"><button>→</button></form></div></div><div class="copyright container">© 2026 Branded Outlet by Fatima. All rights reserved.</div></footer>
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="cartDrawer"><div class="drawer-head"><h2>Your Cart</h2><button class="close" data-close>×</button></div><div id="cartItems" class="drawer-body"></div><div class="drawer-foot"><div><span>Subtotal</span><b id="subtotal">Rs. 0</b></div><div><span>Delivery</span><b id="delivery">Rs. 250</b></div><div class="grand"><span>Total</span><b id="grandTotal">Rs. 250</b></div><button class="btn dark full" id="checkoutBtn">PROCEED TO CHECKOUT</button></div></aside>
+<div class="modal" id="productModal"><div class="modal-card product-modal"><button class="close" data-close>×</button><div id="productModalContent"></div></div></div>
+<div class="modal" id="checkoutModal"><div class="modal-card"><button class="close" data-close>×</button><p class="eyebrow">CHECKOUT</p><h2>Complete your order</h2><form id="checkoutForm" class="checkout"><label>Full name<input required name="name"></label><label>Email address<input required type="email" name="email"></label><label>Phone number<input required name="phone"></label><label>Complete delivery address<textarea required name="address" rows="3"></textarea></label><label>City<input required name="city"></label><label>Payment method<select name="payment"><option>Cash on Delivery</option><option>Bank Transfer</option></select></label><div class="checkout-total"><span>Order total</span><b id="checkoutTotal">Rs. 0</b></div><button class="btn dark full">PLACE ORDER</button></form></div></div>
+<div class="modal" id="accountModal"><div class="modal-card"><button class="close" data-close>×</button><p class="eyebrow">MY ACCOUNT</p><h2>Customer account</h2><p class="muted">Customer login can be connected to a full customer database later. Orders already save to the backend when you run this package.</p></div></div>
+<script src="products.js"></script><script src="app.js"></script>
+</body></html>

@@ -1,0 +1,78 @@
+==================================================
+  BRANDED OUTLET BY FATIMA — LIVE DEPLOY GUIDE
+==================================================
+
+STEP 1: GITHUB PE UPLOAD KAREN
+--------------------------------
+1. github.com pe jao → Sign Up (free)
+2. "New repository" banao:
+   - Name: branded-outlet-by-fatima
+   - Public select karo
+   - "Create repository" click karo
+3. Apne computer mein Git Bash / Terminal kholo
+4. Ye commands run karo (ek ek karke):
+
+   cd C:\path\to\branded_outlet_by_fatima_saya_style
+   git init
+   git add .
+   git commit -m "Initial commit - Branded Outlet by Fatima"
+   git branch -M main
+   git remote add origin https://github.com/YOUR_GITHUB_USERNAME/branded-outlet-by-fatima.git
+   git push -u origin main
+
+   Note: YOUR_GITHUB_USERNAME ki jagah apna GitHub username likhna
+
+STEP 2: RENDER.COM PE DEPLOY KAREN (FREE)
+------------------------------------------
+1. render.com pe jao → "Get Started for Free"
+2. GitHub se sign up karo (same account)
+3. Dashboard pe "New +" → "Web Service"
+4. "Connect a repository" → apna "branded-outlet-by-fatima" select karo
+5. Ye settings confirm karo:
+   - Name: branded-outlet-by-fatima
+   - Region: Singapore (Asia ke liye fast)
+   - Branch: main
+   - Build Command: npm install
+   - Start Command: npm start
+   - Instance Type: Free
+6. "Environment Variables" section mein ADD karo:
+
+   Key: ADMIN_USER        Value: fatima    (ya koi bhi name)
+   Key: ADMIN_PASSWORD    Value: Fatima@786  (strong password)
+
+7. "Create Web Service" click karo
+8. 2-3 minute wait karo — deploy hoga
+9. Ap ko milega: https://branded-outlet-by-fatima.onrender.com
+
+STEP 3: WEBSITE TEST KAREN
+----------------------------
+- Store: https://branded-outlet-by-fatima.onrender.com
+- Admin: https://branded-outlet-by-fatima.onrender.com/admin
+- Login: apna set kiya hua ADMIN_USER aur ADMIN_PASSWORD
+
+STEP 4: CUSTOM DOMAIN (OPTIONAL - ~$10/year)
+----------------------------------------------
+Agar www.brandedoutletbyfatima.com chahiye:
+1. namecheap.com se domain khariden
+2. Render Dashboard → apki service → "Settings" → "Custom Domains"
+3. Domain add karo
+4. Jo DNS records bataye woh Namecheap mein Domain DNS settings mein add karo
+5. 24 ghante mein kaam karega
+
+==================================================
+  IMPORTANT NOTES
+==================================================
+
+FREE PLAN KI LIMITATION:
+- Render free plan pe agar 15 minute tak koi visit nahi karta to
+  server "sleep" ho jata hai. Pehli visit pe 30-50 second lag sakte hain.
+- Products aur orders server restart pe reset ho sakte hain.
+
+DATA PERMANENTLY SAVE KARNE KE LIYE (Recommended):
+- Supabase.com pe free PostgreSQL database banao
+- Mujhe batao main code update kar dunga
+
+CONTACT SUPPORT:
+- WhatsApp: 0334 5581169
+- Email: brandedoutletbyfatima786@gmail.com
+==================================================
