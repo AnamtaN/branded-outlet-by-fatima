@@ -100,9 +100,9 @@ app.post('/api/orders', (req, res) => {
 });
 
 app.post('/api/admin/login', (req, res) => {
-  const username = process.env.ADMIN_USER || 'admin';
-  const password = process.env.ADMIN_PASSWORD || 'ChangeMe123!';
-  if (req.body.username === username && req.body.password === password) {
+  const username = (process.env.ADMIN_USER || 'fatima').trim();
+  const password = (process.env.ADMIN_PASSWORD || 'Fatima786').trim();
+  if (req.body.username.trim() === username && req.body.password.trim() === password) {
     req.session.admin = true;
     return res.json({ ok: true });
   }
