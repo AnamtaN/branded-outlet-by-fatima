@@ -37,6 +37,7 @@
   .price strong{font-size:13px}
   .price del{font-size:10px}
   .card-actions{grid-template-columns:1fr;gap:5px}
+  .card-actions .btn.outline{display:none}
   .btn{padding:9px 10px;font-size:10px}
   .newsletter-inner{display:block}
   .newsletter{padding:35px 0}
