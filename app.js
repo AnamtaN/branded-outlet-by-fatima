@@ -41,7 +41,8 @@ function filtered(){
 function card(p){
   const wished=wishlist.includes(Number(p.id));
   const discount=p.original&&p.sale?Math.round((1-p.sale/p.original)*100):null;
-  return `<article class="product-card"><div class="product-image"><img src="${escapeHtml(p.image)}" alt="${escapeHtml(p.brand+' '+p.name)}" loading="lazy"><span class="badge">${escapeHtml(p.badge||'NEW')}</span><button class="heart ${wished?'active':''}" data-wish="${p.id}">♡</button>${discount?`<span class="discount">-${discount}%</span>`:''}</div><div class="product-info"><p class="brand">${escapeHtml(p.brand)}</p><h3>${escapeHtml(p.name)}</h3><p class="code">${escapeHtml(p.code||'')}</p><div class="price">${p.original?`<del>${money(p.original)}</del>`:''}<strong>${money(p.sale)}</strong></div><div class="card-actions"><button class="btn outline" data-view="${p.id}">QUICK VIEW</button><button class="btn dark" data-add="${p.id}">ADD TO CART</button></div></div></article>`;
+  const imgSrc = p.image ? (p.image.startsWith('http') ? p.image : '/' + p.image.replace(/^\//,'')) : '';
+  return `<article class="product-card"><div class="product-image"><img src="${escapeHtml(imgSrc)}" alt="${escapeHtml(p.brand+' '+p.name)}" loading="lazy" onerror="this.style.display='none'"><span class="badge">${escapeHtml(p.badge||'NEW')}</span><button class="heart ${wished?'active':''}" data-wish="${p.id}">♡</button>${discount?`<span class="discount">-${discount}%</span>`:''}</div><div class="product-info"><p class="brand">${escapeHtml(p.brand)}</p><h3>${escapeHtml(p.name)}</h3><p class="code">${escapeHtml(p.code||'')}</p><div class="price">${p.original?`<del>${money(p.original)}</del>`:''}<strong>${money(p.sale)}</strong></div><div class="card-actions"><button class="btn outline" data-view="${p.id}">QUICK VIEW</button><button class="btn dark" data-add="${p.id}">ADD TO CART</button></div></div></article>`;
 }
 function render(){
   const a=filtered();
