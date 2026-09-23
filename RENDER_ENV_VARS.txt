@@ -1,0 +1,18 @@
+========================================
+  RENDER.COM - ENVIRONMENT VARIABLES
+  Copy karo aur Render pe paste karo
+========================================
+
+Key: ADMIN_USER
+Value: fatima
+
+Key: ADMIN_PASSWORD
+Value: Fatima@786!
+
+Key: SESSION_SECRET
+Value: BrandedOutletFatima2026SecretKey!786
+
+Key: PORT
+Value: 5500
+
+========================================
